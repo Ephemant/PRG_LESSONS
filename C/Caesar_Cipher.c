@@ -3,7 +3,7 @@ Author: Etienne Cárdenas Wertheimer
 Date: 23/09/2020
 Description:
 
-The following program performed Caesar Cipher over a string as user input.
+The following program performed Caesar Cipher over a string given by the user.
 You also have the option of decrypting the message knowing the number of rounds.
 
 https://en.wikipedia.org/wiki/Caesar_cipher
