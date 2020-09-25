@@ -30,7 +30,7 @@ int main(int argc, char** argv[])
     fgets(strData, maxChars, stdin);
 
     printf("Enter number of rounds: ");
-    do //rounds shall be an integer number greater than Zero
+    do //rounds shall be and integer number greater than Zero
     {
         scanf("%d", &rounds);
     } while(rounds <= 0);
