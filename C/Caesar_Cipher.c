@@ -1,10 +1,12 @@
 /**
-Author: Etienne Cárdenas Wertheimer
+Author: Etienne CÃ¡rdenas Wertheimer
 Date: 23/09/2020
 Description:
 
 The following program performed Caesar Cipher over a string as user input.
 You also have the option of decrypting the message knowing the number of rounds.
+
+https://en.wikipedia.org/wiki/Caesar_cipher
 **/
 
 #include <stdio.h>
