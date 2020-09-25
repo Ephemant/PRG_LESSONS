@@ -62,8 +62,8 @@ void cipher(char *data, int rounds, int offset)
                 data[i] = (data[i] - 65 + offset)%26; //Shift Right to the next Char
                 /**
                     The remainder (%) operator in C is only equal to the modulo if the numbers are positive.
-                    If the divisor is negative and the dividend is positive, the result of the remainder will be negative
-                    Then, to obtain the value of the modulo the dividend must be added to the previous result
+                    If the divisor is positive and the dividend is negative value, the result of the remainder will be negative.
+                    Then, the reminder is a negative number. To obtain the modulo, the divisor must be added to the reminder
                 **/
                 if(data[i] < 0)
                 {
