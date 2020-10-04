@@ -2,12 +2,9 @@
 Author: Etienne Cárdenas Wertheimer
 Date:   27/07/2020
 Description:
-
 The following program consists of a modification of the classic Rock, Paper, Scissors game called Rock, Paper, Scissors, Lizard, Spock.
 You have the option to play Player vs Player, or Player vs CPU
-
 Rules:
-
     rock crushes scissors
     rock crushes lizard
     paper covers rock
@@ -18,7 +15,6 @@ Rules:
     lizard poisons Spock
     Spock vaporizes rock
     Spock smashes scissors
-
 **/
 
 #include <stdio.h>
@@ -120,8 +116,8 @@ void loop()
             //Show players score
             system("CLS");
             printf("Score:\n\n");
-            printf("%s:\t%d\n", player[0].name, player[0].score);
-            printf("%s:\t%d\n\n", player[1].name, player[1].score);
+            printf("%s: %d\n", player[0].name, player[0].score);
+            printf("%s: %d\n\n", player[1].name, player[1].score);
             system("PAUSE");
         }
         selectPlay(player, &turn, &round);
@@ -143,7 +139,7 @@ void menu(Player *player)
     printf("\t2.- Player vs CPU\n");
     printf("\t3.- Exit");
 
-    printf("\nOption: ");
+    printf("\n\nOption: ");
     scanf("%d", &op);
 
     switch(op)
@@ -237,7 +233,7 @@ void selectPlay(Player *player, int *turn, int *round)
         //Else...The Player 2 can select manually the option
         else
         {
-            printf("\Play %s: ", player[idx_player].name);
+            printf("\nPlay %s: ", player[idx_player].name);
             scanf("%d", &op);
         }
     }
