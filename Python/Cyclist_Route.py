@@ -21,6 +21,7 @@ import random
 import matplotlib.pyplot as plt
 
 def maxHeight(cyclistRoute):
+    
     #Max element from the list
     top = max(cyclistRoute)
     #Get the number of occurrences of the max element in the list
