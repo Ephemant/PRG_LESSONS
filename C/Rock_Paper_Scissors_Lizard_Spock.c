@@ -1,10 +1,10 @@
 /**
-Author: Etienne Cárdenas Wertheimer
+Author: Etienne CÃ¡rdenas Wertheimer
 Date:   27/07/2020
 Description:
 
 The following program consists of a modification of the classic Rock, Paper, Scissors game called Rock, Paper, Scissors, Lizard, Spock.
-You have the option to play Player vs Player, or Player vs PC
+You have the option to play Player vs Player, or Player vs CPU
 
 Rules:
 
@@ -31,7 +31,7 @@ typedef struct Players
     char name[64];    //player name
     int play;         //player play
     int score;        //player score
-    int pc;           //pc = 1 => random plays will be selected
+    int cpu;           //cpu = 1 => random plays will be selected
 } Player;
 //*** End Struct ***
 
@@ -140,7 +140,7 @@ void menu(Player *player)
     printf("Select a game option:\n\n");
 
     printf("\t1.- Player vs Player\n");
-    printf("\t2.- Player vs PC\n");
+    printf("\t2.- Player vs CPU\n");
     printf("\t3.- Exit");
 
     printf("\nOption: ");
@@ -148,27 +148,27 @@ void menu(Player *player)
 
     switch(op)
     {
-        //If option 1 is selected player_1 and player_2 attributes will be filled; player.pc = 0 => Player vs Player
+        //If option 1 is selected player_1 and player_2 attributes will be filled; player.cpu = 0 => Player vs Player
         case 1:
             strcpy(player[0].name, "Player 1");
             player[0].score = 0;
-            player[0].pc = 0;
+            player[0].cpu = 0;
 
             strcpy(player[1].name, "Player 2");
             player[1].score = 0;
-            player[1].pc = 0;
+            player[1].cpu = 0;
 
             break;
 
-        //If option 2 is selected player_1 and player_2 attributes will be filled; player.pc = 1 => Player vs PC
+        //If option 2 is selected player_1 and player_2 attributes will be filled; player.cpu = 1 => Player vs CPU
         case 2:
             strcpy(player[0].name, "Player 1");
             player[0].score = 0;
-            player[0].pc = 0;
+            player[0].cpu = 0;
 
-            strcpy(player[1].name, "PC");
+            strcpy(player[1].name, "CPU");
             player[1].score = 0;
-            player[1].pc = 1;
+            player[1].cpu = 1;
 
             break;
 
@@ -206,10 +206,10 @@ void selectPlay(Player *player, int *turn, int *round)
     }
     else
     {
-        //If player_2 is PC....
-        if(player[idx_player].pc == 1)
+        //If player_2 is CPU....
+        if(player[idx_player].cpu == 1)
         {
-            //PC can't choose to go back to the main menu (op [1-5] are allowed)
+            //CPU can't choose to go back to the main menu (op [1-5] are allowed)
             op = (rand() % (5 + 1 - 1)) + 1;
             system("CLS");
 
